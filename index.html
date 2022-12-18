@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM FITNESS</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+        font-family: 'Kanit', sans-serif;
+        color: aliceblue;
+        margin: 0px;
+        padding: 0px;
+        background: url('final.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 100*100;
+        font-size: xx-small;
+    }
+
+    .left {
+        display: inline-block;
+        position: absolute;
+        left: 14px;
+        top: 0px;
+        margin: 2px;
+        padding: 2px;
+        /* border: 2px solid red; */
+    }
+
+    .mid {
+        display: block;
+        width: 50%;
+        margin: auto auto;
+        padding: 2px;
+        /* border: 2px solid red; */
+    }
+
+    .right {
+        position: absolute;
+        right: 14px;
+        top: 0px;
+        display: inline-block;
+        margin: 2px;
+        padding: 2px;
+        /* border: 2px solid red; */
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    .navbar li a {
+        color: black;
+        text-decoration: none;
+        padding: 30px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        color: grey;
+        text-decoration: underline;
+        padding: 30px;
+    }
+
+    .left img {
+        width: 98px;
+        /* filter: invert(100%); */
+    }
+
+    .left div {
+        color: black;
+        font-style: oblique;
+        text-align: center;
+        font-size: medium;
+    }
+
+    .btn {
+        font-family: 'Kanit', sans-serif;
+        margin: 5px;
+        padding: 5px;
+        color: white;
+        background-color: black;
+        border: 3px;
+        border-style: groove;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgba(104, 97, 97, 0.607);
+    }
+
+    .container {
+        font-family: 'Kanit', sans-serif;
+        color: black;
+        margin: 49px 405px;
+        padding: 53px 79px;
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 33%;
+    }
+
+    .formgroup input {
+        font-family: 'Kanit', sans-serif;
+        text-align: center;
+        display: block;
+        width: 280px;
+        margin: 4px 93px;
+        padding: 2px 2px;
+        border-radius: 23px;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+    .container button{
+        display: block;
+        width: 33%;
+        margin: 10px auto;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <header class="class">
+        <div class="left">
+            <img src="data:image/png;base64,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"
+                alt="aur vai">
+            <div class="logo">
+                GYM FITNESS
+            </div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Course</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">
+                JOIN
+            </button>
+            <button class="btn">
+                CALL US
+            </button>
+            <button class="btn">
+                FAQs
+            </button>
+            <button class="btn">
+                WHO Guide-lines
+            </button>
+        </div>
+        <div class="container">
+            <h1>GYM's ENROLLEMENT FORM</h1>
+            <form action="noaction.php">
+                <div class="formgroup">
+                    <input type="text" name="name" placeholder="Enter your name">
+                </div>
+                <div class="formgroup">
+                    <input type="number" name="age" placeholder="Enter your age">
+                </div>
+                <div class="formgroup">
+                    <input type="text" name="Gender" placeholder="Enter your Gender">
+                </div>
+                <div class="formgroup">
+                    <input type="text" name="mobile no." placeholder="Enter your mobile no.">
+                </div>
+                <button class="btn">SUBMIT</button>
+            </form>
+        </div>
+    </header>
+
+</body>
+
+</html>
